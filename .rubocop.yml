@@ -30,11 +30,8 @@ Style/Encoding:
 Style/Documentation:
   Description: "Document classes and non-namespace modules."
   Enabled: false
-Style/InlineComment:
-  Description: "Avoid inline comments."
-  Enabled: false
 Style/FrozenStringLiteralComment:
-  Description: To help transition from Ruby 2.3.0 to Ruby 3.0.
+  Description: "To help transition from Ruby 2.7 to Ruby 3.0."
   Enabled: true
 Style/WordArray:
   Description: "Use %w or %W for arrays of words."
@@ -42,9 +39,8 @@ Style/WordArray:
 Style/StringLiterals: # Defaults all strings to double quotes. Less performant, but nicer for consistency, and for adding interpolation later.
   EnforcedStyle: double_quotes
 
-Layout/HashAlignment: # Prettier hashes.
-  EnforcedHashRocketStyle: table
-  EnforcedColonStyle: table
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_explicit
 
 Lint/UnusedBlockArgument: # No auto-correct for unused block arguments, but will still warn.
   AutoCorrect: false

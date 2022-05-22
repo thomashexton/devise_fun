@@ -1,14 +1,4 @@
 # --------------------
-# Excluded Files
-# --------------------
-AllCops:
-  Exclude:
-    - "config/**/*"
-    - "db/**/*"
-    - "**/node_modules/**/*"
-    - "**/spec/**/*"
-
-# --------------------
 # Metrics Cops
 # --------------------
 Metrics/AbcSize:
@@ -16,7 +6,7 @@ Metrics/AbcSize:
   Max: 35
 Metrics/MethodLength:
   Enabled: true
-  Max: 5
+  Max: 20
 Metrics/ClassLength:
   Enabled: true
   Max: 200
@@ -24,7 +14,7 @@ Metrics/BlockLength:
   Exclude:
     - "**/concerns/**/*.rb"
     - "**/*.rake"
-    - "**/api/api/**/*.rb" # we exclude grape because we wrap calls in large blocks. No easy way to shrink
+    - "**/api/api/**/*.rb" # we exclude this because of large blocks required in "grape".
 
 # --------------------
 # Layout Cops
@@ -40,8 +30,9 @@ Layout/SpaceInsideArrayLiteralBrackets:
   EnforcedStyle: space
 Layout/EmptyLinesAroundClassBody:
   EnforcedStyle: no_empty_lines
-Layout/FirstHashElementIndentation: # Causing all sorts of unexpected results. Buggy as
-  Enabled: false
+Layout/FirstHashElementIndentation:
+  Enabled: true
+  EnforcedStyle: consistent
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: false
 Layout/SpaceAroundMethodCallOperator:
