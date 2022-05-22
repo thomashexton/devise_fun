@@ -11,6 +11,17 @@ Metrics/ClassLength:
   Enabled: true
   Max: 200
 Metrics/BlockLength:
+  Max: 5
+  IgnoredMethods:
+    - context
+    - describe
+    - it
+    - shared_examples
+    - shared_examples_for
+    - namespace
+    - draw
+    - configure
+    - group
   Exclude:
     - "**/concerns/**/*.rb"
     - "**/*.rake"
