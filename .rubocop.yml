@@ -7,8 +7,6 @@ inherit_from:
   - .rubocop-sentia.yml
   # - .rubocop_todo.yml
 
-# "sensible defaults" sourced from
-# https://gist.github.com/stungeye/10423491
 AllCops:
   NewCops: enable
   Exclude:
@@ -24,28 +22,3 @@ AllCops:
     # - Gemfile
     - Rakefile
     # - config.ru
-
-Style/Encoding:
-  Enabled: false
-Style/Documentation:
-  Description: "Document classes and non-namespace modules."
-  Enabled: false
-Style/FrozenStringLiteralComment:
-  Description: "To help transition from Ruby 2.7 to Ruby 3.0."
-  Enabled: true
-Style/WordArray:
-  Description: "Use %w or %W for arrays of words."
-  Enabled: false
-Style/StringLiterals: # Defaults all strings to double quotes. Less performant, but nicer for consistency, and for adding interpolation later.
-  EnforcedStyle: double_quotes
-
-Layout/HashAlignment:
-  EnforcedLastArgumentHashStyle: ignore_explicit
-
-Lint/UnusedBlockArgument: # No auto-correct for unused block arguments, but will still warn.
-  AutoCorrect: false
-Lint/UnusedMethodArgument: # No auto-correct for unused method arguments, but will still warn.
-  AutoCorrect: false
-
-Rails/HasAndBelongsToMany:
-  Enabled: false
